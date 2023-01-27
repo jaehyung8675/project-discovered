@@ -1,4 +1,4 @@
-Discoverd
+# Discoverd
 
 Demo - https://project-discovered.netlify.app
 
