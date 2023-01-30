@@ -79,8 +79,6 @@ function App() {
     [currentCategory]
   );
 
-  console.log(currentCategory);
-
   return (
     <>
       <Header />
