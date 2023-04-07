@@ -1,0 +1,108 @@
+@use '../util' as *;
+
+.fact-form {
+  display: flex;
+  flex-flow: column;
+  width: rem(320);
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: rem(32);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 3;
+
+  @include breakpoint(medium) {
+    width: rem(400);
+  }
+
+  .btn-close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: rem(40);
+    height: rem(40);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    .icon-close {
+      width: rem(30);
+      height: rem(30);
+      color: var(--color-dark-background);
+    }
+  }
+  .form__title {
+    font-size: rem(26);
+    margin-bottom: rem(10);
+  }
+  .form__item {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: rem(12);
+
+    .item__label {
+      font-size: rem(14);
+      font-weight: bold;
+      color: var(--color-text-light-tint);
+      margin-bottom: rem(6);
+    }
+
+    .item__input {
+      font-size: rem(14);
+      color: var(--color-accent);
+      background-color: var(--color-dark-background);
+      border-radius: var(--border-radius);
+      padding: rem(16) rem(18);
+    }
+
+    .form-category {
+      background-size: 5px 5px, 5px 5px, 1px 1.5em;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #555, #555);
+      background-position: calc(100% - 17px) calc(1em + 8px),
+        calc(100% - 12px) calc(1em + 8px), calc(100% - 2.5em) 1em;
+      appearance: none;
+      border: none;
+    }
+
+    .textarea-wrap {
+      position: relative;
+      max-height: rem(120);
+
+      .input-description {
+        width: 100%;
+        height: 100%;
+        min-height: rem(120);
+      }
+
+      .word-count {
+        position: absolute;
+        right: rem(18);
+        bottom: rem(10);
+        color: var(--color-accent);
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    ::placeholder {
+      color: var(--color-text-light-tint);
+    }
+  }
+}
+
+.btn-share {
+  display: block;
+  width: rem(120);
+  margin: 0 auto;
+  margin-top: rem(10);
+}

@@ -1,0 +1,153 @@
+@use '../util' as *;
+
+.main-wrap {
+  width: 100vw;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    border-bottom: none;
+    width: 100%;
+    padding: rem(30) rem(30) rem(0);
+
+    @include breakpoint(medium) {
+      background-color: var(--color-background);
+      border-bottom: var(--border-line-light);
+      padding: rem(25) rem(50);
+    }
+
+    .nav__headline {
+      font-size: rem(24);
+    }
+
+    .btn-add {
+      font-size: rem(16);
+      padding: rem(10);
+
+      @include breakpoint(medium) {
+        padding: rem(12) rem(20);
+      }
+
+      .icon-add {
+        display: block;
+
+        @include breakpoint(medium) {
+          display: none;
+        }
+      }
+
+      .add-copy {
+        display: none;
+
+        @include breakpoint(medium) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .facts-wrap {
+    padding: rem(30);
+
+    @include breakpoint(medium) {
+      padding: rem(50);
+    }
+
+    .facts-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(20);
+
+      .fact {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-background);
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        padding: rem(26);
+        box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.15);
+
+        @include breakpoint(medium) {
+          max-width: rem(230);
+          height: rem(280);
+        }
+
+        .fact-wrap {
+          .fact__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: rem(20);
+
+            .fact__label {
+              font-weight: bold;
+              color: var(--color-text-light-tint);
+              text-transform: uppercase;
+            }
+
+            .fact__link {
+              width: rem(22);
+              height: rem(22);
+
+              .icon-link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: var(--color-accent);
+              }
+            }
+          }
+          .fact__copy {
+            font-size: rem(14);
+            line-height: 1.6;
+            margin-bottom: rem(16);
+            overflow: hidden;
+
+            @include breakpoint(medium) {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .btn-wrap {
+          font-size: rem(16);
+          color: var(--color-accent);
+          display: flex;
+          justify-content: space-between;
+          gap: rem(8);
+
+          .btn-vote {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-dark-background);
+            border-radius: var(--border-radius);
+            padding: rem(7);
+          }
+
+          .icon-like,
+          .icon-dislike {
+            width: rem(17);
+            height: rem(17);
+            display: block;
+            margin-right: rem(10);
+          }
+        }
+      }
+    }
+  }
+
+  .message {
+    color: var(--color-accent);
+    padding: rem(30);
+
+    @include breakpoint(medium) {
+      padding: rem(50);
+    }
+  }
+}

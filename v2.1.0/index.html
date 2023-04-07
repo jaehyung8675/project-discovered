@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <title>Discovered</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <aside>
+        <div class="logo-wrap">
+          <a class="logo" href="/">
+            <span class="logo__symbol">
+              <svg viewBox="0 0 40 40" width="100%" height="100%">
+                <g>
+                  <path
+                    class="st0"
+                    d="M23.5,12.9H11.45l1.09,1.93V27.1H23.5c1.98,0,3.45-0.39,4.41-1.16c0.96-0.77,1.44-1.99,1.44-3.65v-4.61
+           c0-1.63-0.48-2.83-1.45-3.61C26.93,13.29,25.47,12.9,23.5,12.9z M24.66,22.05c-0.02,1.14-0.64,1.72-1.88,1.72h-5.53v-7.58h5.53
+           c1.26,0,1.88,0.56,1.88,1.69V22.05z"
+                  />
+                  <path
+                    class="st0"
+                    d="M20,0C8.97,0,0,8.97,0,20c0,11.03,8.97,20,20,20c11.03,0,20-8.97,20-20C40,8.97,31.03,0,20,0z M20,37.04
+           C10.6,37.04,2.96,29.4,2.96,20C2.96,10.6,10.6,2.96,20,2.96c9.4,0,17.04,7.64,17.04,17.04C37.04,29.4,29.4,37.04,20,37.04z"
+                  />
+                </g>
+              </svg>
+            </span>
+            <span class="logo__copy">Discovered</span>
+          </a>
+        </div>
+        <div class="category-wrap">
+          <h3 class="category__label">All Categories</h3>
+          <ul class="category__links">
+            <!-- <ul class="category__links active"> -->
+            <button class="category-close"></button>
+            <li class="category-link__item">
+              <button class="btn-category active">All</button>
+            </li>
+            <li class="category-link__item">
+              <button class="btn-category">Technology</button>
+            </li>
+
+            <li class="category-link__item">
+              <button class="btn-category">Science</button>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="main-wrap">
+        <nav class="nav">
+          <h2 class="nav__headline">Today what I found</h2>
+          <button class="btn btn-add">
+            <span class="add-copy">Add New Fact</span>
+          </button>
+        </nav>
+
+        <section class="facts-wrap">
+          <ul class="facts-list">
+            <li class="fact">
+              <div class="fact-wrap">
+                <div class="fact__header">
+                  <span class="fact__label">History</span>
+                  <a class="fact__link" href="/"></a>
+                </div>
+                <p class="fact__copy">
+                  The shortest war in history lasted 38 minutes! It was between
+                  Britain and Zanzibar on August 27, 1896.
+                </p>
+              </div>
+              <div class="btn-wrap">
+                <button class="btn-vote">
+                  <span class="vote-icon--like"></span>37
+                </button>
+                <button class="btn-vote">
+                  <span class="vote-icon--dislike"></span> 7
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <form class="fact-form hidden">
+      <button class="btn btn-close"></button>
+      <h3 class="form__title">Add New Fact</h3>
+      <div class="form__item">
+        <label class="item__label" for="category">Category</label>
+        <select class="item__input form-category">
+          <option value="">Choose Category</option>
+          <option value="">Technology</option>
+          <option value="">Science</option>
+          <option value="">Finance</option>
+        </select>
+      </div>
+      <div class="form__item">
+        <label class="item__label" for="description">Description</label>
+        <div class="textarea-wrap">
+          <textarea
+            class="item__input input-description"
+            placeholder="Share a fact you discovered!"
+          ></textarea>
+          <span class="word-count">120</span>
+        </div>
+      </div>
+      <div class="form__item">
+        <label class="item__label" for="link">Link</label>
+        <input
+          class="item__input"
+          type="text"
+          placeholder="http://example.com"
+        />
+      </div>
+      <button class="btn btn-share">Share</button>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

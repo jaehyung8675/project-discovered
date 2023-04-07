@@ -1,0 +1,127 @@
+@use '../util' as *;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-secondary;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 1.8;
+  color: var(--color-text-light-primary);
+  background-color: var(--color-dark-background);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+  background-color: transparent;
+  color: inherit;
+  width: max-content;
+  height: max-content;
+}
+
+.btn {
+  font-weight: bold;
+  color: var(--color-dark-background);
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  padding: rem(12) rem(20);
+}
+
+input,
+input:focus,
+select:focus,
+button,
+textarea,
+textarea:focus {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+textarea {
+  font-family: inherit;
+  line-break: normal;
+  resize: none;
+}
+
+img {
+  width: auto;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+a,
+a:visited,
+a:active {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+a:hover,
+button:hover,
+figcaption:hover {
+  transition: var(--transition);
+}
+
+.visuallyhidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.overflowhidden {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.hidden {
+  display: none !important;
+  // visibility: hidden;
+  // opacity: 0;
+}
